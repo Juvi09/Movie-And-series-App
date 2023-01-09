@@ -20,6 +20,9 @@
 
      <!-- ! using font awesome -->
      <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+     <!-- ! CSS swiper -->
+     <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 <body>
     
@@ -61,8 +64,20 @@
     <!-- ! Slider -->
      <section id="main-slider">
 
+
+        <!-- ! Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+
+            
         <!-- ! box -->
         <div class="main-slider-box">
+
+            <!-- ! Overlayer -->
+            <a href="#" class="main-slider-overlayer">
+                <i class="fas fa-play"></i>
+            </a>
 
            <!-- ! img -->
            <div class="main-slider-img">
@@ -82,10 +97,61 @@
                     <span>2014</span>
                     <strong>Paranormal Activity: The Marked Ones</strong>
                 </div>
+
+                <!-- ! Category and Ratings -->
+                <div class="category-rating">
+                    <!-- ! Category -->
+                    <div class="category">
+                        <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#">Thriller</a>
+                    </div>
+                    <!-- ! Rating-->
+                    <div class="rating">
+                        5.2 <img src="images/IMDb-icon.png" alt="imbd" />
+                    </div>
+                </div>
             </div>
            </div>
         </div>
+
+          </div>
+          
+          
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
      </section>
+
+     <!-- ! JS -->
+     <script src="js/swiper-bundle.min.js"></script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          },
+        });
+      </script>
 
 </body>
 </html>
